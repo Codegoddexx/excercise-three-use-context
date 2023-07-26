@@ -46,7 +46,7 @@ import { TheContext } from './context/TheContextProvider'
           <label>Expiry Date</label>
           <input type="date" value={state.expiryDate} onInput={changeDate} />
           <label>CVC</label>
-          <input type="number" value={state.cvc} onInput={changeCvc}/>
+          <input type="number" value={state.cvc} onInput={changeCvc} maxLength={3}/>
           <button className='button'>Confirm</button>
         </form>
        </div>
