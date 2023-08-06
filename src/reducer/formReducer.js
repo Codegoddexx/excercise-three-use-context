@@ -5,10 +5,12 @@ const formReducer = (state, action) => {
       return { ...state, cardName: action.payload };
     } else if (action.type === "CHANGE_NUMBER") {
       return { ...state, cardNumber: action.payload };
-    } else if (action.type === "CHANGE_DATE") {
-      return { ...state, expiryDate: action.payload }; // Update the "Mail" property, not "lastName"
+    } else if (action.type === "CHANGE_MONTH") {
+      return { ...state, expiryMonth: action.payload };
+    } else if (action.type === "CHANGE_YEAR") {
+      return { ...state, expiryYear: action.payload };
     } else if (action.type === "CHANGE_CVC") {
-      return { ...state, cvc: action.payload }; // Update the "password" property, not "lastName"
+      return { ...state, cvc: action.payload };
     } else {
       return state;
     }
